@@ -5,3 +5,6 @@
 ### This project does not connect to any database and uses a JSON server as a temporary database.
 
 ### Use React-Router so that the user can navigate to different sections.
+
+
+### Users are able to toggle dark mode/light mode.
