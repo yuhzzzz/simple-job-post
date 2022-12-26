@@ -10,14 +10,14 @@ import RootLayout from "./layout/RootLayout"
 // components
 import Home, { loadData } from "./pages/Home"
 import Layout from "./pages/Create"
-import Job from "./pages/Job"
+import Job, { getJob } from "./pages/Job"
 export default function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path="/" element={<RootLayout />}>
         <Route index element={<Home />} loader={loadData} />
         <Route path="/create" element={<Layout />} />
-        <Route path="/job/:id" element={<Job />} />
+        <Route path="/jobs" element={<Job />} />
       </Route>
     )
   )
