@@ -5,7 +5,9 @@ export default function Card({ id, title, salary, location }) {
 
   return (
     <div
-      className={`bg-zinc-600 p-3 rounded-md hover:scale-y-105 font-sans  ${
+      className={`${
+        mode === "dark" ? "bg-zinc-600" : "bg-sky-700"
+      } p-3 rounded-md hover:scale-y-105 font-sans  ${
         mode === "dark" ? "text-white" : "text-zinc-200"
       }`}
     >
