@@ -5,7 +5,7 @@ export async function postData({ salary, title, location, description }) {
     location,
     description,
   }
-  const res = fetch("http://localhost:4000/careers", {
+  const res = fetch("http://localhost:4000/jobs", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

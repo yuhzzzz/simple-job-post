@@ -1,6 +1,6 @@
 import React from "react"
 import useTheme from "../hooks/useTheme"
-export default function Card({ id, title, salary, location }) {
+export default function Card({ id, title, salary, location, description }) {
   const { mode } = useTheme()
 
   return (
@@ -16,11 +16,13 @@ export default function Card({ id, title, salary, location }) {
       <h5>Location: {location}</h5>
       <div>
         <h6>Job Description:</h6>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
-          voluptatem dicta repellat! Sint repudiandae eos adipisci recusandae
-          eum? Inventore, modi dolor praesentium nesciunt expedita laudantium!
-        </p>
+        {description || (
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
+            voluptatem dicta repellat! Sint repudiandae eos adipisci recusandae
+            eum? Inventore, modi dolor praesentium nesciunt expedita laudantium!
+          </p>
+        )}
       </div>
     </div>
   )
