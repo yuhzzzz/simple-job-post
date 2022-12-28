@@ -15,7 +15,7 @@ export default function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route path="/" element={<RootLayout />}>
-        <Route index element={<Home />} loader={loadData} />
+        <Route index element={<Home />} />
         <Route path="/create" element={<Layout />} />
         <Route path="/jobs" element={<Job />} />
       </Route>
