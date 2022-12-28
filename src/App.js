@@ -8,7 +8,7 @@ import {
 // layout
 import RootLayout from "./layout/RootLayout"
 // components
-import Home, { loadData } from "./pages/Home"
+import Home from "./pages/Home"
 import Layout from "./pages/Create"
 import Job, { getJob } from "./pages/Job"
 export default function App() {

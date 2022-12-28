@@ -8,12 +8,12 @@ export default function Create() {
   const [salary, setSalary] = useState("")
   const [location, setLocation] = useState("")
   const [description, setDescription] = useState("")
-
+  const { addJob } = useTheme()
   const navigate = useNavigate()
   const handleSubmit = (e) => {
     e.preventDefault()
     postData({ title, salary, location, description })
-
+    addJob({ title, salary, location, description })
     navigate("/")
   }
 

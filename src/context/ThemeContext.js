@@ -19,6 +19,9 @@ export function ThemeContextProvider({ children }) {
   const changeMode = (mode) => {
     dispatch({ type: "CHANGE_MODE", payload: mode })
   }
+  const addJob = (json) => {
+    setUserJobs([...userJob, json])
+  }
   useEffect(() => {
     const fetchData = async () => {
       const res = await fetch("http://localhost:4000/jobs")
@@ -28,7 +31,7 @@ export function ThemeContextProvider({ children }) {
     fetchData()
   }, [])
   return (
-    <ThemeContext.Provider value={{ ...state, changeMode, userJob }}>
+    <ThemeContext.Provider value={{ ...state, changeMode, userJob, addJob }}>
       {children}
     </ThemeContext.Provider>
   )
