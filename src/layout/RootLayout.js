@@ -43,6 +43,7 @@ export default function RootLayout() {
             />
           </nav>
         </header>
+        <h1>Hello world</h1>
         <Outlet />
       </main>
     </div>

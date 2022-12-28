@@ -6,8 +6,6 @@
 
 ### Use React-Router so that the user can navigate to different sections.
 
-
 ### Users are able to toggle dark mode/light mode.
-
 
 TESTING...
