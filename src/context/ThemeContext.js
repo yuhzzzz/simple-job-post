@@ -1,4 +1,4 @@
-import { createContext, useReducer } from "react"
+import { createContext, useEffect, useReducer } from "react"
 
 export const ThemeContext = createContext()
 const reducer = (state, action) => {
@@ -17,6 +17,7 @@ export function ThemeContextProvider({ children }) {
   const changeMode = (mode) => {
     dispatch({ type: "CHANGE_MODE", payload: mode })
   }
+
   return (
     <ThemeContext.Provider value={{ ...state, changeMode }}>
       {children}

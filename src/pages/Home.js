@@ -1,6 +1,7 @@
 import React from "react"
 import { useLoaderData } from "react-router-dom"
 import Card from "../components/Card"
+import useTheme from "../hooks/useTheme"
 export default function Home() {
   const cards = useLoaderData()
 

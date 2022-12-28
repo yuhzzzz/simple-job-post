@@ -2,6 +2,7 @@ import { useState } from "react"
 
 import { useNavigate } from "react-router-dom"
 import { postData } from "../hooks/usePost"
+import useTheme from "../hooks/useTheme"
 export default function Create() {
   const [title, setTitle] = useState("")
   const [salary, setSalary] = useState("")
@@ -12,6 +13,7 @@ export default function Create() {
   const handleSubmit = (e) => {
     e.preventDefault()
     postData({ title, salary, location, description })
+
     navigate("/")
   }
 
